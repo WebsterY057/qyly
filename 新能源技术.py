@@ -1,5 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
+
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+
 
 # 模拟电池放电曲线（电压随时间下降）
 time = np.linspace(0, 10, 100)

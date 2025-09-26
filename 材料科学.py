@@ -1,4 +1,9 @@
 import numpy as np
+import matplotlib.pyplot as plt
+
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 def lennard_jones_potential(r, epsilon=1.0, sigma=1.0):
     """
@@ -13,7 +18,7 @@ def lennard_jones_potential(r, epsilon=1.0, sigma=1.0):
 r_values = np.linspace(0.9, 3.0, 100)
 potentials = [lennard_jones_potential(r) for r in r_values]
 
-import matplotlib.pyplot as plt
+
 plt.plot(r_values, potentials)
 plt.title('Lennard-Jones势能')
 plt.xlabel('原子间距离')

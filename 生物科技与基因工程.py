@@ -11,7 +11,9 @@ print("反向互补序列:", rev_comp)
 #####DNA序列分析
 from collections import Counter
 import matplotlib.pyplot as plt
-
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 class DNAAnalyzer:
     def __init__(self, sequence):

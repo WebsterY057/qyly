@@ -1,7 +1,9 @@
 import hashlib
 import time
 from datetime import datetime
-
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 class Block:
     def __init__(self, index, previous_hash, timestamp, data, hash):
